@@ -33,7 +33,7 @@ public class ExpenseServiceImpl implements ExpenseService {
 		return expense;
 		
 		//Comment below line to make test fail
-		//return expenseRepository.save(expense);
+		return expenseRepository.save(expense);
 	}
 
 	public List<Expense> getExpense() {
@@ -57,8 +57,8 @@ public class ExpenseServiceImpl implements ExpenseService {
 		log.info("Debug delete");
 		
 		//Comment below 2 lines to make test fail
-		//expenseRepository.deleteById(expenseId);
-		//expenseRepository.flush();
+		expenseRepository.deleteById(expenseId);
+		expenseRepository.flush();
 	}
 
 }
